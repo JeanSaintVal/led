@@ -8,7 +8,17 @@ void setup() {
   FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 }
 void loop() {
-    leds[0] = CRGB::Yellow;
+   for(int dot = 0; dot <NUM_LEDS; dot++) 
+    leds[dot] = CRGB::Yellow;
     FastLED.show();
-    delay (30);
-}
+    delay(1000);
+    leds[0] = CRGB::Black;
+    FastLED.show();
+    delay(1000);
+    leds[0] = CRGB::Blue;
+    FastLED.show();
+    delay(1000);
+    leds[0] = CRGB::Black;
+    FastLED.show();
+    delay(1000);
+          }
